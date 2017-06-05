@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="hom.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+
+<body>
+<div id="t1">
+<p id="e1">brightentreatment123@gmail.com</p>
+<img id="pn" src="g.png">
+<div class="t2">
+<p id="e2">Brighten</p>
+<p id="e3">Treatments</p>
+<p class="p1"><b><a href="doctor.html">HOME</a></p>
+<p class="p2"><a href="service.html">SERVICES</a></p>
+<p class="p3"><a href="dt.html">DOCTORS</a></p>
+<p class="p4"><a href="blog.html">BLOGS</a></p>
+<p class="p5"><a href="contact.html">CONTACTUS</a></b></p>
+
+<a href="login-2.html"><input type="submit" class="b1" value="Show Appointment"></a>
+
+
+
+
+</div>
+<div class="t3">
+<img class="im1" src="im2.jpg">
+<div class="t4">
+
+<div class="t5">
+<p class="pp1"><b>We Care About Your Health</b></p>
+</div>
+<p class="pp2">Welcome to our medical clinic and health soluton.We give our best experience care to our patients</p>
+<div class="t6"><p class="pp3">Highly Skilled and Experienced Medical Staff</p></div>
+<div class="t7"><p class="pp3"><b>State of the art diagonstic equipments</b></p></div>
+
+</div>
+
+</div>
+
+<div class="t8">
+<img class="im2" src="ap.jpg">
+<form name="f1" onSubmit="return validate();" method="post" action="Patient">
+<input type="text" class="i1" placeholder="&nbsp;&nbsp;Full Name"  name="n1" ng-model="user" required>
+
+
+<input type="email" placeholder="&nbsp;&nbsp;Email" class="i2" name="n2"  ng-model="email" required>
+
+
+<input type="text" placeholder="&nbsp;&nbsp;Mobile No." class="i3" name="n3" ng-model="mob" required>
+
+
+<input type="date" placeholder="&nbsp;&nbsp;Booking Date" class="i4" name="n4" ng-model="dat" required>
+
+<select name="dr" class="dr">
+    <option>--Select Doctor--</option>
+    <option> Meenakshi Joshi </option>
+    <option> Parduman Pandey </option>
+    <option> Ashish   </option>
+    <option> Meena Kumari </option>
+    
+</select>
+<textarea class="i5" placeholder="Message or Symptoms" name="n6"></textarea>
+
+<input type="submit" class="b2" value="Book Appointment"ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+myForm.email.$dirty && myForm.email.$invalid"
+>
+</form>
+<script type="text/javascript">
+function validate()
+{
+var nm=document.f1.n1.value;
+var email=document.f1.n2.value;
+var mob=document.f1.n3.value;
+var dat=document.f1.n4.value;
+var loc=document.f1.n5.value;
+var mess=document.f1.n6.value;
+var dr=document.f1.dr.value;
+
+if(nm=="" || email=="" || mob=="" || dat=="" || loc=="" || mess=="" || dr=="--Select Doctor--")
+{
+
+window.alert("All field must be filled out");
+}
+else
+{
+	window.alert("congrats Your apointment is booked");
+}
+}
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+   
+});
+
+</script>
+</div>
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<style>
+input.ng-invalid {
+    background-color:pink;
+}
+input.ng-valid {
+    background-color:lightgreen;
+}
+</style>
+
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="hom3.css">
+</head>
+
+<body ng-app="">
+<div id="t1">
+<p id="e1">brightentreatment123@gmail.com</p>
+<img id="pn" src="g.png">
+<div class="t2">
+<p id="e2">Brighten</p>
+<p id="e3">Treatments</p>
+<p class="p1"><b><a href="doctor.html">HOME</a></p>
+<p class="p2"><a href="service.html">SERVICES</a></p>
+<p class="p3"><a href="dt.html">DOCTORS</a></p>
+<p class="p4"><a href="blog.html">BLOGS</a></p>
+<p class="p5"><a href="contact.html">CONTACTUS</a></b></p>
+
+<a href="login-2.html"><input type="submit" class="b1" value="Show Appointment"></a>
+</div>
+<img src="im5.png" id="im1">
+<form name="f1" onSubmit="return validate();" method="post" action="Feed">
+<input type="text" placeholder="Name" id="in1" name="n1" required>
+
+<input type="email" placeholder="Email Id" id="in2" name="n2" required>
+<input type="tel" placeholder="Phone number" id="in3" name="n3" required>
+
+<textarea placeholder="FeedBack" id="in4" name="n4" required></textarea>
+<input type="submit" value="send" id="s2">
+<input type="reset" value="Reset" id="s3">
+</form>
+<p id="inf">CONTACT INFORMATION</p>
+<p id="md2">Get Brighten treatments contact information from our online directory or submit your Inquiry online.We are happy to answer your question or concerns.</p>
+<p id="md">For medical Emergency plaese call 911</p>
+<p id="md1">if u have a non emergency medical question contact your physician directly.For more information on finding a provider call-9898989898</p>
+
+<p id="eml">Email Id:rajahari123@gmail.com</p>
+<p id="mob">mob:9824876512</p>
+
+
+
+
+</div>
+<script>
+function validate()
+{
+var nm=document.f1.n1.value;
+var email=document.f1.n2.value;
+var mob=document.f1.n3.value;
+var msg=document.f1.n4.value;
+
+
+if(nm=="" || email=="" || mob=="" || msg=="")
+{
+
+window.alert("All field must be filled out");
+}
+else
+{
+	window.alert(" Your msg  sent successfully !");
+}
+}
+
+</script>
+</body>
+</html>
